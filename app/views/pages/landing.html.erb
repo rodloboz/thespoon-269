@@ -1,0 +1,19 @@
+<% categories = [ 'japanese', 'indian', 'french' ] %>
+
+<h2>We have these categories available</h2>
+<ul>
+  <% categories.each do |category| %>
+    <li><%= category.capitalize %></li>
+  <% end %>
+</ul>
+
+<p>Pick a category:</p>
+<form action="/restaurants" method="get">
+  <input type="text" name="food_type" placeholder="What kind of food?">
+  <input type="submit">
+</form>
+
+<!-- <a href="/restaurants">All Restaurants</a> -->
+<%= link_to "All Restaurants", restaurants_path %>
+<%= link_to "Contact", contact_path %>
+<%= link_to "About", about_path %>

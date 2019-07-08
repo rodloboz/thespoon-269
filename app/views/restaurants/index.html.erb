@@ -1,0 +1,9 @@
+<h1>Restaurants#index</h1>
+<p>Hello from restaurants index</p>
+
+<p>You picked: <%= @category %></p>
+<ul>
+  <% @restaurants.each do |id, restaurant| %>
+  <li>Name: <%= link_to restaurant[:name], restaurant_path(id) %> Address: <%= restaurant[:address] %></li>
+  <% end %>
+</ul>
